@@ -1,0 +1,220 @@
+:root {
+  --main-green: #1acc8d;
+  --main-gray: color-mix(in srgb, white, transparent 30%);
+}
+.hero-section {
+  padding: 100px 0 100px;
+  background-image: url("media/hero-bg-2.jpg");
+  background-position: left;
+  width: 100%;
+  min-height: 70vh;
+  position: relative;
+}
+.hero-section::after {
+  content: "";
+  background: color-mix(in srgb, #08005e, transparent 10%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.hero-section img {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.hero-section h1 {
+  color: var(--main-gray);
+  font-size: 3.3rem;
+}
+.hero-section p {
+  color: var(--main-gray);
+  font-size: 1.3rem;
+}
+.hero-section h1 span {
+  color: white;
+  border-bottom: 4px solid var(--main-green);
+}
+.hero-section a {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  text-align: center;
+  display: inline-block;
+  width: fit-content;
+}
+.btn-get-started {
+  background-color: var(--main-green);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+.btn-get-started:hover {
+  background-color: #119768;
+}
+.btn-watch-video {
+  font-weight: 600;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.btn-watch-video i {
+  color: var(--main-green);
+  font-size: 30px;
+}
+.btn-watch-video span {
+  font-weight: 700;
+  transition: 500ms;
+}
+.btn-watch-video:hover span {
+  color: var(--main-green);
+}
+.hero-section .hero-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+.hero-section .wave1 use {
+  animation: move-1 10s linear infinite;
+  animation-delay: -2s;
+  fill: white;
+  opacity: 0.6;
+}
+@keyframes move-1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+.hero-section .wave2 use {
+  animation: move-2 8s linear infinite;
+  animation-delay: -2s;
+  fill: white;
+  opacity: 0.4;
+}
+@keyframes move-2 {
+  0% {
+    transform: translate(-85px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+.hero-section .wave3 use {
+  animation: move-3 6s linear infinite;
+  animation-delay: -2s;
+  fill: white;
+}
+@keyframes move-3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+/* end of hero styling */
+
+/* start of about styling */
+.about-section {
+  padding: 90px 0 80px;
+}
+.about-section .content h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 10px 20px;
+  background: color-mix(in srgb, var(--main-green), transparent 95%);
+  color: var(--main-green);
+  border-radius: 7px;
+  display: inline-block;
+}
+.about-section .content h2 {
+  font-weight: 700;
+  color: #040677;
+}
+.about-section .content .read-more {
+  background: var(--main-green);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.5s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.about-section .content .read-more:hover {
+  background: #6cd4b0;
+}
+.about-section .content .read-more i {
+  margin-left: 8px;
+  position: relative;
+  transition: 0.5s;
+}
+.about-section .content .read-more:hover i {
+  transform: translateX(5px);
+}
+.about-section .icon-card {
+  background-color: white;
+  padding: 50px 40px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 0.5s ease-out 0s;
+  position: relative;
+  min-height: 360px;
+}
+.about-section .icon-card i {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 0;
+  transition: all 0.5s ease-out;
+  background-color: color-mix(in srgb, var(--main-green), transparent 95%);
+  color: var(--main-green);
+}
+.about-section .icon-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #040677;
+}
+/* .icon-card:nth-of-type(2) {
+  margin-top: -30px;
+} */
+.icon-cards > .col-md-6:nth-child(2n) .icon-card {
+  transform: translateY(-40px);
+}
+.icon-card:hover i {
+  background-color: var(--main-green);
+  color: white;
+}
+/* end of about styling */
