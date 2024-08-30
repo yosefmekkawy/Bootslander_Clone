@@ -211,7 +211,7 @@
   margin-top: -30px;
 } */
 .icon-cards > .col-md-6:nth-child(2n) .icon-card {
-  transform: translateY(-40px);
+  margin-top: -30px;
 }
 .icon-card:hover i {
   background-color: var(--main-green);
